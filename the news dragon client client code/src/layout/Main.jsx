@@ -7,13 +7,14 @@ import Col from 'react-bootstrap/Col';
 import LeftNav from '../pages/Shared/leftNav/leftNav';
 import RightNav from '../pages/Shared/rightNav/RightNav';
 import { Outlet } from 'react-router-dom';
+import NavigationBar from '../pages/Shared/NavigationBar/NavigationBar';
 
 
 const Main = () => {
   return (
     <div>
         <Header></Header>
-        
+        <NavigationBar></NavigationBar>
         <Container>
       <Row>
         <Col lg={3}>
