@@ -8,11 +8,11 @@ import bg from '../../../assets/bg.png'
 const RightNav = () => {
   return (
     <div>
-      <h4>Login with</h4>
+      <h4 className='mt-4'>Login with</h4>
       <Button variant="outline-primary mb-2"><FaGoogle /> Login with Google</Button>
       <Button variant="outline-secondary"><FaGithub></FaGithub>Login with Github</Button>
       <div>
-        <h4>Find us on</h4>
+        <h4 className='mt-4'>Find us on</h4>
         <ListGroup>
       <ListGroup.Item><FaFacebook /> Facebook</ListGroup.Item>
       <ListGroup.Item><FaInstagram /> Instagram</ListGroup.Item>
