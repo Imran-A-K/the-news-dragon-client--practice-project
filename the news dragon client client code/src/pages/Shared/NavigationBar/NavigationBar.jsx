@@ -9,7 +9,15 @@ import { AuthContext } from "../../../providers/AuthProvider";
 import { useContext } from "react";
 
 const NavigationBar = () => {
-  const { user } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () =>{
+    logOut()
+    .then()
+    .catch(error => {
+      console.log(error.message)
+    })
+  }
 
   return (
     <Container>
@@ -27,7 +35,7 @@ const NavigationBar = () => {
               {user && <FaUserAlt style={{ fontSize: "2rem" }} />}
 
               {user ? (
-                <Button variant="secondary">LogOut</Button>
+                <Button onClick={handleLogOut} variant="secondary">LogOut</Button>
               ) : (
                 <Link to="/login">
                   <Button variant="secondary">Login</Button>
